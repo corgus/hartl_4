@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title= full_title(yield(:title))
+    link rel="icon" type="image/png" href=asset_path('favicon.ico')
+    meta name='description' content="#{t('page.description')}"
+
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700&subset=latin,latin-ext'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    = render 'layouts/shim'
+  body
+    = render 'layouts/header'
+    .container
+      - flash.each do |message_type, message|
+        div class="alert alert-#{message_type}"= message
+      = yield
+    = render 'layouts/footer'
+    = debug(params) if Rails.env.development?
