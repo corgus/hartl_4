@@ -101,13 +101,12 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.2.1'
   # gem 'better_errors' #, '~> 2.1.1'
   gem 'web-console', '2.0.0.beta3'
+  gem 'guard-bundler', require: false
+  gem 'guard-rails'
 end
 
 group :development do
   # gem 'binding_of_caller', :platforms=>[:mri_21]
-  gem 'guard-bundler', require: false
-  gem 'guard-rails'
-  gem 'guard-rspec'
   gem 'quiet_assets'
   # gem 'rb-fchange', :require=>false
   # gem 'rb-fsevent', :require=>false
