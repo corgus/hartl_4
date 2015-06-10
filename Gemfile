@@ -38,34 +38,45 @@ source 'https://rubygems.org'
 # end
 
 
-RAILS_VERSION = '~> 4.2.0'
+RAILS_VERSION = '~> 4.2.1'
 ruby '2.1.3'
-gem 'rails', RAILS_VERSION
+gem 'rails',            RAILS_VERSION
 gem 'pg', '~> 0.18.1'
-gem 'activesupport',   RAILS_VERSION, :require => 'active_support'
-gem 'actionpack',      RAILS_VERSION, :require => 'action_pack'
+gem 'activesupport',    RAILS_VERSION, :require => 'active_support'
+gem 'actionpack',       RAILS_VERSION, :require => 'action_pack'
 # gem 'actionpack-action_caching'
-gem 'actionmailer',    RAILS_VERSION, :require => 'action_mailer'
-gem 'railties',        RAILS_VERSION, :require => 'rails'
-gem 'bcrypt',                  '3.1.7'
-gem "slim-rails"
-gem 'will_paginate',           '3.0.7'
+gem 'actionmailer',     RAILS_VERSION, :require => 'action_mailer'
+gem 'railties',         RAILS_VERSION, :require => 'rails'
+gem 'bcrypt',           '~> 3.1.7'
+gem 'slim-rails'
+gem 'will_paginate',    '3.0.7'
 
-gem 'bootstrap-sass', '~> 3.3.4'
-# gem 'bootstrap-will_paginate', '0.0.10'
+gem 'bootstrap-sass',   '~> 3.3.4'
+gem 'bootstrap-will_paginate', '0.0.10'
 # gem 'nokogiri', '~> 1.6.6.2'
 # gem 'tzinfo'
 # gem 'simple_form'
 
-# javascript
+## javascript
+#
 gem 'jquery-rails', '4.0.3'
 # gem 'turbolinks', '2.3.0'
 gem 'mapbox-rails', '~> 1.6.1.1'
 
-# sessions
+## sessions
+#
 # gem 'devise'
 # gem 'omniauth'
 gem 'omniauth-facebook'
+
+# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'jbuilder', '~> 2.0'
+
+# Use ActiveModel has_secure_password
+# gem 'bcrypt', '~> 3.1.7'
+
+# Use Capistrano for deployment
+# gem 'capistrano-rails', group: :development
 
 gem 'fog', '1.23.0'
 gem 'carrierwave', '0.10.0'
@@ -122,11 +133,3 @@ group :production do
   gem 'rails_12factor'
 end
 
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development

@@ -21,4 +21,8 @@
 
 en:
   page:
-    description: "SpotSaga. Map anything."
+    description: "Hartl. Map anything."
+  will_paginate:
+    previous_label: "Previous"
+    next_label: "Next"
+    page_gap: "&hellip;"
